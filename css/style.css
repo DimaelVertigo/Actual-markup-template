@@ -151,15 +151,55 @@ html,
 body {
   height: 100%;
   color: #000000;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+html ::-moz-selection,
+body ::-moz-selection {
+  background-color: #000000;
+  color: #fff;
+}
+html ::selection,
+body ::selection {
+  background-color: #000000;
+  color: #fff;
 }
 * {
   box-sizing: border-box;
 }
-input::-webkit-input-placeholder {
-  color: #fff;
+input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="url"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #000000;
 }
-input:-moz-placeholder {
-  color: #fff;
+input[type="text"]:-moz-placeholder,
+input[type="email"]:-moz-placeholder,
+input[type="number"]:-moz-placeholder,
+input[type="search"]:-moz-placeholder,
+input[type="url"]:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #000000;
+}
+input[type="text"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
+input[type="search"]::-moz-placeholder,
+input[type="url"]::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #000000;
+}
+input[type="text"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #000000;
 }
 .f_clear {
   height: auto;
@@ -179,17 +219,18 @@ input:-moz-placeholder {
 .btn {
   outline: none;
   border-radius: none;
-  display: inline-block;
   border: none;
-  border-radius: 3px;
+  display: inline-block;
   background-clip: padding-box;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
 }
-.btn:hover,
-.btn:focus {
+.btn:hover {
   cursor: pointer;
+}
+.btn[disabled] {
+  background-color: gray;
 }
 .link:hover,
 .link:focus {

@@ -9,15 +9,17 @@
 html, body {
     height: 100%;
     color: @brand;
+    user-select: text; 
+    ::selection {
+    	background-color: @brand;
+    	color: #fff;
+    }
 }
 * {
     box-sizing: border-box;
 }
-input::-webkit-input-placeholder {
-	color: #fff;
-}
-input:-moz-placeholder {
-	color: #fff;
+input[type="text"], input[type="email"], input[type="number"], input[type="search"], input[type="url"], textarea {
+	.placeholder(@color: @brand)
 }
 .f_clear {
     height: auto;
@@ -37,16 +39,18 @@ input:-moz-placeholder {
 .btn {
 	outline: none;
 	border-radius: none;
-	display: inline-block;
 	border: none;
-	border-radius: 3px;
+	display: inline-block;
 	background-clip: padding-box;
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
 	
-	&:hover, &:focus {
+	&:hover {
 	    cursor: pointer;
+	}
+	&[disabled] {
+		background-color: gray;
 	}
 }
 .link {
@@ -55,7 +59,6 @@ input:-moz-placeholder {
 	    text-decoration: none;
 	}
 }
-
 .title {
 	
 }

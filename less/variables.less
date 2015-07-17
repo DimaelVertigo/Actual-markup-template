@@ -19,9 +19,13 @@
 		    	only screen and (                min-resolution: 2dppx)";
 
 // Mixins
-.slow (@sec:.2s) {
-	transition: all @sec ease-in-out;
+.transition(@duration:0.2s, @ease:ease-out) {
+	-webkit-transition: all @duration @ease;
+	-moz-transition: all @duration @ease;
+	-o-transition: all @duration @ease;
+	transition: all @duration @ease;
 }
+
 .triangle-base() {
     content: '';
     display: block;
@@ -55,4 +59,54 @@
     border-top: (@width / 2) solid transparent;
     border-bottom: (@width / 2) solid transparent;
     border-left: @height solid @color;
+}
+
+.placeholder(@color:#aaa, @element: 08121991) {
+  .inception (@arguments) when not (@element = 08121991) {
+    @{element}::-webkit-input-placeholder {
+       color: @color;
+    }
+    @{element}:-moz-placeholder {
+       color: @color;
+    }
+    @{element}::-moz-placeholder {
+       color: @color;
+    }
+    @{element}:-ms-input-placeholder {
+       color: @color;
+    }
+  }
+  .inception (@arguments) when (@element = 08121991) {
+    &::-webkit-input-placeholder {
+       color: @color;
+    }
+    &:-moz-placeholder {
+       color: @color;
+    }
+    &::-moz-placeholder {
+       color: @color;
+    }
+    &:-ms-input-placeholder {
+       color: @color;
+    }
+  }
+  .inception(@arguments);
+}
+
+.opacity(@opacity:0.5) {
+	-moz-opacity: @opacity;
+	-khtml-opacity: @opacity;
+	-webkit-opacity: @opacity;
+	opacity: @opacity;
+	@opperc: @opacity * 100;
+
+	-ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(opacity=@ {
+		opperc
+	}
+	)";
+
+	filter:~"alpha(opacity=@ {
+		opperc
+	}
+	)";
 }
