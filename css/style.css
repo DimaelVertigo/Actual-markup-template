@@ -130,41 +130,39 @@ table {
 =            FONTS            =
 =============================*/
 /*-----  End of FONTS  ------*/
+/*=============================================================
+=            Media Queries            =
+=============================================================*/
+/*=============================================================
+=            iPhone 5 & 5S Media Queries            =
+=============================================================*/
+/*----------  iPhone 5 & 5S in portrait & landscape  ----------*/
+/*==============================================
+=            iPhone 6 Media Queries            =
+==============================================*/
+/*----------  iPhone 6 in portrait & landscape  ----------*/
+/*======================================================
+=            Turn Off Number Input Spinners            =
+======================================================*/
 /*=====================================
 =            Custom styles            =
 =====================================*/
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
+html {
+  font-size: 62.5%;
 }
-.clearfix:after {
-  clear: both;
-}
-.clearfix {
-  *zoom: 1;
-}
-.clear {
-  clear: both;
+body {
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
 }
 html,
 body {
   height: 100%;
-  color: #000000;
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
-}
-html ::-moz-selection,
-body ::-moz-selection {
-  background-color: #000000;
-  color: #fff;
-}
-html ::selection,
-body ::selection {
-  background-color: #000000;
-  color: #fff;
 }
 * {
   box-sizing: border-box;
@@ -175,7 +173,7 @@ input[type="number"]::-webkit-input-placeholder,
 input[type="search"]::-webkit-input-placeholder,
 input[type="url"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #000000;
+  color: #000;
 }
 input[type="text"]:-moz-placeholder,
 input[type="email"]:-moz-placeholder,
@@ -183,7 +181,7 @@ input[type="number"]:-moz-placeholder,
 input[type="search"]:-moz-placeholder,
 input[type="url"]:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #000000;
+  color: #000;
 }
 input[type="text"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder,
@@ -191,7 +189,7 @@ input[type="number"]::-moz-placeholder,
 input[type="search"]::-moz-placeholder,
 input[type="url"]::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #000000;
+  color: #000;
 }
 input[type="text"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder,
@@ -199,7 +197,14 @@ input[type="number"]:-ms-input-placeholder,
 input[type="search"]:-ms-input-placeholder,
 input[type="url"]:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #000000;
+  color: #000;
+}
+input,
+textarea,
+button,
+select {
+  color: inherit;
+  font: inherit;
 }
 .f_clear {
   height: auto;
@@ -209,21 +214,21 @@ textarea:-ms-input-placeholder {
   width: 100%;
 }
 .wrapper {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 .content {
   width: 100%;
 }
 .btn {
-  outline: none;
+  background-clip: padding-box;
   border-radius: none;
   border: none;
   display: inline-block;
-  background-clip: padding-box;
-  text-decoration: none;
+  outline: none;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
 }
 .btn:hover {
