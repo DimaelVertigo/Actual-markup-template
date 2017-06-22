@@ -1,1 +1,0 @@
-$(document).ready(function(){TweenMax.to(".box",2,{left:600})});
