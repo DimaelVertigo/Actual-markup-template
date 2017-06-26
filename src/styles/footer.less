@@ -1,6 +1,29 @@
 /*==============================
-=            FOOTER            =
+=            Footer            =
 ==============================*/
+.footer {
+	height: 75px;
+	margin-bottom: 68px;
+	background-color: #f8f8f8;
+	border: 1px solid @border;
+	border-radius: 0px 0px 6px 6px;
+	display: flex;
+	justify-content: center;
 
-/*-----  End of FOOTER  ------*/
+	&__handler {
+		color: @c-blue;
+		font-size: 1.6rem;
+		font-weight: 700;
+		line-height: 7.5rem;
+		position: relative;
+		display: flex;
+		align-items: center;
 
+		&::after {
+			content: '';
+			display: block;
+			margin-left: 11px;
+			.retina-sprite(@arrow2-group);
+		}
+	}
+}

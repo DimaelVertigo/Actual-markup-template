@@ -1,54 +1,14 @@
-// Fonts
+@brand: #585858;
+@c-orange: #f80;
+@c-blue: #0073ae;
+@c-ligthblue: #60aeea;
+@c-gray: #f8f8f8;
+@border: #e4e4e4;
 
-
-// Colors
-@brand: #000;
-
-/*=============================================================
-=            Media Queries            =
-=============================================================*/
-@mobile:      ~"only screen and (min-width : 320px) and (max-width : 766px)";
-// @smartphone:  ~"only screen and (min-width: 480px) and (max-width: 766px)";
-@tablet:      ~"only screen and (min-width: 767px) and (max-width: 1199px)";
-@tablet-l:    ~"only screen and (min-width: 767px) and (max-width: 1199px) and (orientation: landscape)";
-@tablet-p:    ~"only screen and (min-width: 767px) and (max-width: 1199px) and (orientation: portrait)";
-@desktop:     ~"only screen and  (min-width: 1200px) 
-                  and (max-width: 1599px) 
+@mobile:      ~"only screen and (min-width : 320px) and (max-width : 768px)";
+@desktop:     ~"only screen and  (min-width: 769px) 
                   and (-webkit-min-device-pixel-ratio: 1)";
 
-@1600:        ~"only screen and (min-width: 1600px)";
-@1800:        ~"only screen and (min-width: 1800px)";
-
-@retina:      ~"only screen and (-webkit-min-device-pixel-ratio: 2),
-                only screen and (   min--moz-device-pixel-ratio: 2),
-                only screen and (     -o-min-device-pixel-ratio: 2/1),
-                only screen and (        min-device-pixel-ratio: 2),
-                only screen and (                min-resolution: 192dpi),
-                only screen and (                min-resolution: 2dppx)";
-
-/*=============================================================
-=            iPhone 5 & 5S Media Queries            =
-=============================================================*/
-
-/*----------  iPhone 5 & 5S in portrait & landscape  ----------*/
-
-@iphone5:     ~"only screen 
-                and (min-device-width : 320px) 
-                and (max-device-width : 568px)
-                and (-webkit-device-pixel-ratio: 2)";
-
-/*==============================================
-=            iPhone 6 Media Queries            =
-==============================================*/
-
-/*----------  iPhone 6 in portrait & landscape  ----------*/
-
-@iphone6:     ~"only screen 
-                and (min-device-width : 375px) 
-                and (max-device-width : 667px)
-                and (-webkit-device-pixel-ratio: 2)";
-
-// Mixins
 .transition(@duration:0.2s, @ease:ease-out) {
   transition: all @duration @ease;
 }
@@ -87,59 +47,3 @@
     border-bottom: (@width / 2) solid transparent;
     border-left: @height solid @color;
 }
-
-.placeholder(@color:#aaa, @element: 08121991) {
-  .inception (@arguments) when not (@element = 08121991) {
-    @{element}::-webkit-input-placeholder {
-       color: @color;
-    }
-    @{element}:-moz-placeholder {
-       color: @color;
-    }
-    @{element}::-moz-placeholder {
-       color: @color;
-    }
-    @{element}:-ms-input-placeholder {
-       color: @color;
-    }
-  }
-  .inception (@arguments) when (@element = 08121991) {
-    &::-webkit-input-placeholder {
-       color: @color;
-    }
-    &:-moz-placeholder {
-       color: @color;
-    }
-    &::-moz-placeholder {
-       color: @color;
-    }
-    &:-ms-input-placeholder {
-       color: @color;
-    }
-  }
-  .inception(@arguments);
-}
-
-.opacity(@opacity:0.5) {
-  opacity: @opacity;
-  @opperc: @opacity * 100;
-
-  -ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(opacity=@ {
-    opperc
-  }
-  )";
-
-  filter:~"alpha(opacity=@ {
-    opperc
-  }
-  )";
-}
-
-/*======================================================
-=            Turn Off Number Input Spinners            =
-======================================================*/
-// input[type=number]::-webkit-inner-spin-button, 
-// input[type=number]::-webkit-outer-spin-button { 
-//   -webkit-appearance: none; 
-//   margin: 0; 
-// }
