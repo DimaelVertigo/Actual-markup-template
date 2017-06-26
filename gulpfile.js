@@ -227,7 +227,6 @@ gulp.task('scripts', function() {
   return gulp.src(['./src/scripts/lib/*.js'], ['./src/scripts/*.js'])
     .pipe(concat('all.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./src/scripts/'))
     .pipe(gulp.dest('./public/scripts/'))
     .pipe(notify({
       title: 'JavaScript',
