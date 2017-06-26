@@ -1,0 +1,49 @@
+@brand: #585858;
+@c-orange: #f80;
+@c-blue: #0073ae;
+@c-ligthblue: #60aeea;
+@c-gray: #f8f8f8;
+@border: #e4e4e4;
+
+@mobile:      ~"only screen and (min-width : 320px) and (max-width : 768px)";
+@desktop:     ~"only screen and  (min-width: 769px) 
+                  and (-webkit-min-device-pixel-ratio: 1)";
+
+.transition(@duration:0.2s, @ease:ease-out) {
+  transition: all @duration @ease;
+}
+
+.triangle-base() {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    -moz-transform: scale(.9999);
+}
+.triangle(@direction, @size, @color) {
+    .triangle(@direction, @size * 2, @size, @color);
+}
+.triangle(@direction, @width, @height, @color) when (@direction = up) {
+    .triangle-base();
+    border-left: (@width / 2) solid transparent;
+    border-right: (@width / 2) solid transparent;
+    border-bottom: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = down) {
+    .triangle-base();
+    border-left: (@width / 2) solid transparent;
+    border-right: (@width / 2) solid transparent;
+    border-top: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = left) {
+    .triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-right: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = right) {
+    .triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-left: @height solid @color;
+}
