@@ -189,14 +189,34 @@ body {
   background-repeat: no-repeat;
   transition: .2s all linear;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .page-404__social-list a {
+    background-size: 90px 90px;
+  }
+}
 .page-404__social-list a:first-child {
   background-image: url('../images/vk.png');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .page-404__social-list a:first-child {
+    background-image: url('../images/vk-2x.png');
+  }
 }
 .page-404__social-list a:nth-child(2) {
   background-image: url('../images/instagram.png');
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .page-404__social-list a:nth-child(2) {
+    background-image: url('../images/instagram-2x.png');
+  }
+}
 .page-404__social-list a:last-child {
   background-image: url('../images/twitter.png');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .page-404__social-list a:last-child {
+    background-image: url('../images/twitter-2x.png');
+  }
 }
 .page-404__social-list a:hover {
   opacity: .75;

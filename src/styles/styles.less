@@ -68,6 +68,7 @@ html, body {
   &__logo {
     margin-top: -40px;
     transform: scale(.8);
+
   }
   &__title {
     font-size: 44px;
@@ -88,14 +89,34 @@ html, body {
       background-position: center;
       background-repeat: no-repeat;
       transition: .2s all linear;
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+        background-size: 90px 90px;
+      }
       &:first-child {
         background-image: url('../images/vk.png');
+        @media
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+          background-image: url('../images/vk-2x.png');
+        }
       }
       &:nth-child(2) {
         background-image: url('../images/instagram.png');
+        @media
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+          background-image: url('../images/instagram-2x.png');
+        }
       }
       &:last-child {
         background-image: url('../images/twitter.png');
+        @media
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+          background-image: url('../images/twitter-2x.png');
+        }
       }
       &:hover {
         opacity: .75;
