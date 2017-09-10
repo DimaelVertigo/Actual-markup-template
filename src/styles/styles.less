@@ -1,2 +1,341 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}html{font-size:62.5%}html,body{height:100%;user-select:text}*{box-sizing:border-box}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline
+}
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block
+}
+
+body {
+	line-height: 1
+}
+
+ol, ul {
+	list-style: none
+}
+
+blockquote, q {
+	quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+html, body {
+	height: 100%;
+	user-select: text
+}
+
+* {
+	box-sizing: border-box
+}
+
+@import "sprite-png";
+@font-face {
+	font-family: 'akrobatblack';
+	src: url('../fonts/akrobat-black-webfont.eot');
+	src: url('../fonts/akrobat-black-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/akrobat-black-webfont.woff2') format('woff2'),
+	url('../fonts/akrobat-black-webfont.woff') format('woff'),
+	url('../fonts/akrobat-black-webfont.ttf') format('truetype'),
+	url('../fonts/akrobat-black-webfont.svg#akrobatblack') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'akrobatregular';
+	src: url('../fonts/akrobat-regular-webfont.eot');
+	src: url('../fonts/akrobat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/akrobat-regular-webfont.woff2') format('woff2'),
+	url('../fonts/akrobat-regular-webfont.woff') format('woff'),
+	url('../fonts/akrobat-regular-webfont.ttf') format('truetype'),
+	url('../fonts/akrobat-regular-webfont.svg#akrobatregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'akrobatthin';
+	src: url('../fonts/akrobat-thin-webfont.eot');
+	src: url('../fonts/akrobat-thin-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/akrobat-thin-webfont.woff2') format('woff2'),
+	url('../fonts/akrobat-thin-webfont.woff') format('woff'),
+	url('../fonts/akrobat-thin-webfont.ttf') format('truetype'),
+	url('../fonts/akrobat-thin-webfont.svg#akrobatthin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	
+}
+
+.transition(@duration:0.2s, @ease:ease-out) {
+	transition: all @duration @ease;
+}
+
+.placeholder(@color:#aaa, @element: 08121991) {
+	.inception (@arguments) when not (@element = 08121991) {
+		@{element}::-webkit-input-placeholder {
+			color: @color;
+		}
+		@{element}:-moz-placeholder {
+			color: @color;
+		}
+		@{element}::-moz-placeholder {
+			color: @color;
+		}
+		@{element}:-ms-input-placeholder {
+			color: @color;
+		}
+	}
+	.inception (@arguments) when (@element = 08121991) {
+		&::-webkit-input-placeholder {
+			color: @color;
+		}
+		&:-moz-placeholder {
+			color: @color;
+		}
+		&::-moz-placeholder {
+			color: @color;
+		}
+		&:-ms-input-placeholder {
+			color: @color;
+		}
+	}
+	.inception(@arguments);
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeAndSlide {
+	20% {
+		opacity: 1;
+	}
+	50% {
+		top: 50%;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.content {
+	background: url('../images/bg.jpg') center;
+	min-height: 100%;
+	background-size: cover;
+	color: #fff;
+}
+
+.wrapper {
+	max-width: 1435px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transform: scale(.8);
+	.transition(.2s, linear);
+	& > * {
+		opacity: 0;
+	}
+	&.disabled {
+		opacity: 0;
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	margin-bottom: 4.947735192%;
+	opacity: 0;
+	animation: fadeIn 4s forwards;
+	top: 50%;
+	animation: fadeIn 1.7s ease-in forwards;
+}
+
+.logo__icon {
+	display: block;
+	.retina-sprite(@logo-group);
+	animation: spin 8s linear infinite;
+	margin-right: 24px;
+}
+
+.logo__text {
+	font-family: 'akrobatblack';
+	font-size: 90px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.title {
+	font-family: 'akrobatregular';
+	font-size: 60px;
+	text-transform: uppercase;
+	animation: fadeIn 1.7s ease-in forwards;
+	animation-delay: .4s;
+}
+
+.portfolio {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 8.93728223%;
+	animation: fadeIn .7s ease-in forwards;
+	animation-delay: .8s;
+}
+
+.portfolio__item {
+	&:nth-child(1) {
+		.portfolio__link {
+			.retina-sprite(@sphere1-group);
+		}
+	}
+	&:nth-child(2) {
+		.portfolio__link {
+			.retina-sprite(@sphere2-group);
+		}
+	}
+	&:nth-child(3) {
+		.portfolio__link {
+			.retina-sprite(@sphere3-group);
+		}
+	}
+	&:nth-child(4) {
+		.portfolio__link {
+			.retina-sprite(@sphere4-group);
+		}
+	}
+}
+
+.portfolio__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'akrobatblack';
+	font-size: 42px;
+	text-decoration: none;
+	animation: fadeIn 1.7s ease-in forwards;
+	animation-delay: 1.2s;
+	&:hover {
+		opacity: .75;
+	}
+}
+
+.order-btn {
+	background: transparent;
+	border: 5px solid #fff;
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'akrobatblack';
+	font-size: 90px;
+	text-transform: uppercase;
+	padding: 0 14px;
+	height: 133px;
+	margin-top: 10.348432056%;
+	animation: fadeIn 1s forwards;
+	animation-delay: .7s;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.contact-form {
+	display: flex;
+	justify-content: center;
+	padding-top: 13.860627178%;
+	background-color: rgba(0,0,0,.3);
+	height: 100vh;
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	.transition(.4s, linear);
+	&.enabled {
+		top: 0;
+		opacity: 1;
+		z-index: 2;
+	}
+}
+
+.form-group {
+	display: flex;
+	align-items: center;
+	width: 640px;
+	&:nth-child(n+2) {
+		margin-top: 50px;
+	}
+	&:last-child {
+		margin-top: 95px;
+	}
+}
+
+.form-group__input {
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 36px;
+	font-family: 'akrobatthin';
+	text-transform: uppercase;
+	.placeholder(@color: #fff);
+	width: 100%;
+}
+
+.form-group__icon {
+	margin-right: 25px;
+	flex-shrink: 0;
+	&--person {
+		.retina-sprite(@i-person-group);
+	}
+	&--email {
+		.retina-sprite(@i-email-group);
+	}
+	&--tel {
+		.retina-sprite(@i-phone-group);
+	}
+	&--message {
+		.retina-sprite(@i-pen-group);
+	}
+}
+
+.submit-btn {
+	display: block;
+	background: transparent;
+	border: 3px solid #fff;
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'akrobatblack';
+	font-size: 45px;
+	text-transform: uppercase;
+	padding: 0 43px;
+	height: 67px;
+	margin: 46px auto 0;
+	
+	&:hover {
+		cursor: pointer;
+	}
+}

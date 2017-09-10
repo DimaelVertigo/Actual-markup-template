@@ -1,0 +1,361 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@i-email-name: 'i-email';
+@i-email-x: 544px;
+@i-email-y: 161px;
+@i-email-offset-x: -544px;
+@i-email-offset-y: -161px;
+@i-email-width: 39px;
+@i-email-height: 28px;
+@i-email-total-width: 620px;
+@i-email-total-height: 500px;
+@i-email-image: '../images/sprite/sprite-png.png';
+@i-email: 544px 161px -544px -161px 39px 28px 620px 500px '../images/sprite/sprite-png.png' 'i-email';
+@i-pen-name: 'i-pen';
+@i-pen-x: 544px;
+@i-pen-y: 117px;
+@i-pen-offset-x: -544px;
+@i-pen-offset-y: -117px;
+@i-pen-width: 41px;
+@i-pen-height: 41px;
+@i-pen-total-width: 620px;
+@i-pen-total-height: 500px;
+@i-pen-image: '../images/sprite/sprite-png.png';
+@i-pen: 544px 117px -544px -117px 41px 41px 620px 500px '../images/sprite/sprite-png.png' 'i-pen';
+@i-person-name: 'i-person';
+@i-person-x: 504px;
+@i-person-y: 117px;
+@i-person-offset-x: -504px;
+@i-person-offset-y: -117px;
+@i-person-width: 40px;
+@i-person-height: 44px;
+@i-person-total-width: 620px;
+@i-person-total-height: 500px;
+@i-person-image: '../images/sprite/sprite-png.png';
+@i-person: 504px 117px -504px -117px 40px 44px 620px 500px '../images/sprite/sprite-png.png' 'i-person';
+@i-phone-name: 'i-phone';
+@i-phone-x: 504px;
+@i-phone-y: 161px;
+@i-phone-offset-x: -504px;
+@i-phone-offset-y: -161px;
+@i-phone-width: 40px;
+@i-phone-height: 40px;
+@i-phone-total-width: 620px;
+@i-phone-total-height: 500px;
+@i-phone-image: '../images/sprite/sprite-png.png';
+@i-phone: 504px 161px -504px -161px 40px 40px 620px 500px '../images/sprite/sprite-png.png' 'i-phone';
+@logo-name: 'logo';
+@logo-x: 504px;
+@logo-y: 0px;
+@logo-offset-x: -504px;
+@logo-offset-y: 0px;
+@logo-width: 116px;
+@logo-height: 117px;
+@logo-total-width: 620px;
+@logo-total-height: 500px;
+@logo-image: '../images/sprite/sprite-png.png';
+@logo: 504px 0px -504px 0px 116px 117px 620px 500px '../images/sprite/sprite-png.png' 'logo';
+@sphere1-name: 'sphere1';
+@sphere1-x: 253px;
+@sphere1-y: 0px;
+@sphere1-offset-x: -253px;
+@sphere1-offset-y: 0px;
+@sphere1-width: 251px;
+@sphere1-height: 249px;
+@sphere1-total-width: 620px;
+@sphere1-total-height: 500px;
+@sphere1-image: '../images/sprite/sprite-png.png';
+@sphere1: 253px 0px -253px 0px 251px 249px 620px 500px '../images/sprite/sprite-png.png' 'sphere1';
+@sphere2-name: 'sphere2';
+@sphere2-x: 253px;
+@sphere2-y: 249px;
+@sphere2-offset-x: -253px;
+@sphere2-offset-y: -249px;
+@sphere2-width: 246px;
+@sphere2-height: 247px;
+@sphere2-total-width: 620px;
+@sphere2-total-height: 500px;
+@sphere2-image: '../images/sprite/sprite-png.png';
+@sphere2: 253px 249px -253px -249px 246px 247px 620px 500px '../images/sprite/sprite-png.png' 'sphere2';
+@sphere3-name: 'sphere3';
+@sphere3-x: 0px;
+@sphere3-y: 249px;
+@sphere3-offset-x: 0px;
+@sphere3-offset-y: -249px;
+@sphere3-width: 250px;
+@sphere3-height: 251px;
+@sphere3-total-width: 620px;
+@sphere3-total-height: 500px;
+@sphere3-image: '../images/sprite/sprite-png.png';
+@sphere3: 0px 249px 0px -249px 250px 251px 620px 500px '../images/sprite/sprite-png.png' 'sphere3';
+@sphere4-name: 'sphere4';
+@sphere4-x: 0px;
+@sphere4-y: 0px;
+@sphere4-offset-x: 0px;
+@sphere4-offset-y: 0px;
+@sphere4-width: 253px;
+@sphere4-height: 249px;
+@sphere4-total-width: 620px;
+@sphere4-total-height: 500px;
+@sphere4-image: '../images/sprite/sprite-png.png';
+@sphere4: 0px 0px 0px 0px 253px 249px 620px 500px '../images/sprite/sprite-png.png' 'sphere4';
+@i-email-2x-name: 'i-email-2x';
+@i-email-2x-x: 1088px;
+@i-email-2x-y: 322px;
+@i-email-2x-offset-x: -1088px;
+@i-email-2x-offset-y: -322px;
+@i-email-2x-width: 78px;
+@i-email-2x-height: 56px;
+@i-email-2x-total-width: 1240px;
+@i-email-2x-total-height: 1000px;
+@i-email-2x-image: '../images/sprite/sprite-png-retina.png';
+@i-email-2x: 1088px 322px -1088px -322px 78px 56px 1240px 1000px '../images/sprite/sprite-png-retina.png' 'i-email-2x';
+@i-pen-2x-name: 'i-pen-2x';
+@i-pen-2x-x: 1088px;
+@i-pen-2x-y: 234px;
+@i-pen-2x-offset-x: -1088px;
+@i-pen-2x-offset-y: -234px;
+@i-pen-2x-width: 82px;
+@i-pen-2x-height: 82px;
+@i-pen-2x-total-width: 1240px;
+@i-pen-2x-total-height: 1000px;
+@i-pen-2x-image: '../images/sprite/sprite-png-retina.png';
+@i-pen-2x: 1088px 234px -1088px -234px 82px 82px 1240px 1000px '../images/sprite/sprite-png-retina.png' 'i-pen-2x';
+@i-person-2x-name: 'i-person-2x';
+@i-person-2x-x: 1008px;
+@i-person-2x-y: 234px;
+@i-person-2x-offset-x: -1008px;
+@i-person-2x-offset-y: -234px;
+@i-person-2x-width: 80px;
+@i-person-2x-height: 88px;
+@i-person-2x-total-width: 1240px;
+@i-person-2x-total-height: 1000px;
+@i-person-2x-image: '../images/sprite/sprite-png-retina.png';
+@i-person-2x: 1008px 234px -1008px -234px 80px 88px 1240px 1000px '../images/sprite/sprite-png-retina.png' 'i-person-2x';
+@i-phone-2x-name: 'i-phone-2x';
+@i-phone-2x-x: 1008px;
+@i-phone-2x-y: 322px;
+@i-phone-2x-offset-x: -1008px;
+@i-phone-2x-offset-y: -322px;
+@i-phone-2x-width: 80px;
+@i-phone-2x-height: 80px;
+@i-phone-2x-total-width: 1240px;
+@i-phone-2x-total-height: 1000px;
+@i-phone-2x-image: '../images/sprite/sprite-png-retina.png';
+@i-phone-2x: 1008px 322px -1008px -322px 80px 80px 1240px 1000px '../images/sprite/sprite-png-retina.png' 'i-phone-2x';
+@logo-2x-name: 'logo-2x';
+@logo-2x-x: 1008px;
+@logo-2x-y: 0px;
+@logo-2x-offset-x: -1008px;
+@logo-2x-offset-y: 0px;
+@logo-2x-width: 232px;
+@logo-2x-height: 234px;
+@logo-2x-total-width: 1240px;
+@logo-2x-total-height: 1000px;
+@logo-2x-image: '../images/sprite/sprite-png-retina.png';
+@logo-2x: 1008px 0px -1008px 0px 232px 234px 1240px 1000px '../images/sprite/sprite-png-retina.png' 'logo-2x';
+@sphere1-2x-name: 'sphere1-2x';
+@sphere1-2x-x: 506px;
+@sphere1-2x-y: 0px;
+@sphere1-2x-offset-x: -506px;
+@sphere1-2x-offset-y: 0px;
+@sphere1-2x-width: 502px;
+@sphere1-2x-height: 498px;
+@sphere1-2x-total-width: 1240px;
+@sphere1-2x-total-height: 1000px;
+@sphere1-2x-image: '../images/sprite/sprite-png-retina.png';
+@sphere1-2x: 506px 0px -506px 0px 502px 498px 1240px 1000px '../images/sprite/sprite-png-retina.png' 'sphere1-2x';
+@sphere2-2x-name: 'sphere2-2x';
+@sphere2-2x-x: 506px;
+@sphere2-2x-y: 498px;
+@sphere2-2x-offset-x: -506px;
+@sphere2-2x-offset-y: -498px;
+@sphere2-2x-width: 492px;
+@sphere2-2x-height: 494px;
+@sphere2-2x-total-width: 1240px;
+@sphere2-2x-total-height: 1000px;
+@sphere2-2x-image: '../images/sprite/sprite-png-retina.png';
+@sphere2-2x: 506px 498px -506px -498px 492px 494px 1240px 1000px '../images/sprite/sprite-png-retina.png' 'sphere2-2x';
+@sphere3-2x-name: 'sphere3-2x';
+@sphere3-2x-x: 0px;
+@sphere3-2x-y: 498px;
+@sphere3-2x-offset-x: 0px;
+@sphere3-2x-offset-y: -498px;
+@sphere3-2x-width: 500px;
+@sphere3-2x-height: 502px;
+@sphere3-2x-total-width: 1240px;
+@sphere3-2x-total-height: 1000px;
+@sphere3-2x-image: '../images/sprite/sprite-png-retina.png';
+@sphere3-2x: 0px 498px 0px -498px 500px 502px 1240px 1000px '../images/sprite/sprite-png-retina.png' 'sphere3-2x';
+@sphere4-2x-name: 'sphere4-2x';
+@sphere4-2x-x: 0px;
+@sphere4-2x-y: 0px;
+@sphere4-2x-offset-x: 0px;
+@sphere4-2x-offset-y: 0px;
+@sphere4-2x-width: 506px;
+@sphere4-2x-height: 498px;
+@sphere4-2x-total-width: 1240px;
+@sphere4-2x-total-height: 1000px;
+@sphere4-2x-image: '../images/sprite/sprite-png-retina.png';
+@sphere4-2x: 0px 0px 0px 0px 506px 498px 1240px 1000px '../images/sprite/sprite-png-retina.png' 'sphere4-2x';
+@spritesheet-width: 620px;
+@spritesheet-height: 500px;
+@spritesheet-image: '../images/sprite/sprite-png.png';
+@spritesheet-sprites: @i-email @i-pen @i-person @i-phone @logo @sphere1 @sphere2 @sphere3 @sphere4;
+@spritesheet: 620px 500px '../images/sprite/sprite-png.png' @spritesheet-sprites;
+@retina-spritesheet-width: 1240px;
+@retina-spritesheet-height: 1000px;
+@retina-spritesheet-image: '../images/sprite/sprite-png-retina.png';
+@retina-spritesheet-sprites: @i-email-2x @i-pen-2x @i-person-2x @i-phone-2x @logo-2x @sphere1-2x @sphere2-2x @sphere3-2x @sphere4-2x;
+@retina-spritesheet: 1240px 1000px '../images/sprite/sprite-png-retina.png' @retina-spritesheet-sprites;
+
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+@i-email-group-name: 'i-email';
+@i-email-group: 'i-email' @i-email @i-email-2x;
+@i-pen-group-name: 'i-pen';
+@i-pen-group: 'i-pen' @i-pen @i-pen-2x;
+@i-person-group-name: 'i-person';
+@i-person-group: 'i-person' @i-person @i-person-2x;
+@i-phone-group-name: 'i-phone';
+@i-phone-group: 'i-phone' @i-phone @i-phone-2x;
+@logo-group-name: 'logo';
+@logo-group: 'logo' @logo @logo-2x;
+@sphere1-group-name: 'sphere1';
+@sphere1-group: 'sphere1' @sphere1 @sphere1-2x;
+@sphere2-group-name: 'sphere2';
+@sphere2-group: 'sphere2' @sphere2 @sphere2-2x;
+@sphere3-group-name: 'sphere3';
+@sphere3-group: 'sphere3' @sphere3 @sphere3-2x;
+@sphere4-group-name: 'sphere4';
+@sphere4-group: 'sphere4' @sphere4 @sphere4-2x;
+@retina-groups: @i-email-group @i-pen-group @i-person-group @i-phone-group @logo-group @sphere1-group @sphere2-group @sphere3-group @sphere4-group;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `retina-sprite` class sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+@icon-home-group: 'icon-home' @icon-home @icon-home-2x;
+
+.icon-home {
+  .retina-sprite(@icon-home-group);
+}
+*/
+.sprite-background-size(@sprite) {
+  @sprite-total-width: extract(@sprite, 7);
+  @sprite-total-height: extract(@sprite, 8);
+  background-size: @sprite-total-width @sprite-total-height;
+}
+
+.retina-sprite(@retina-group) {
+  @normal-sprite: extract(@retina-group, 2);
+  @retina-sprite: extract(@retina-group, 3);
+  .sprite(@normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    .sprite-image(@retina-sprite);
+    .sprite-background-size(@normal-sprite);
+  }
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}
+
+/*
+The `.retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in LESS
+
+.retina-sprites(@retina-groups);
+*/
+.retina-sprites(@retina-groups, @i: 1) when (@i <= length(@retina-groups)) {
+  @retina-group: extract(@retina-groups, @i);
+  @sprite-name: e(extract(@retina-group, 1));
+  .@{sprite-name} {
+    .retina-sprite(@retina-group);
+  }
+  .retina-sprites(@retina-groups, @i + 1);
+}
